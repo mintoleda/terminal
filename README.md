@@ -1,1 +1,1 @@
-# terminal.adetola.dev
+# terminal
