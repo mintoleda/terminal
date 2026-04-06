@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://adetola.dev/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal | Adetola Adetunji</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="header-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="header-title">terminal.adetola.dev</div>
+        </div>
+        <div id="terminal-content" class="terminal-content">
+          <div id="history"></div>
+          <div class="prompt-line">
+            <span class="prompt-text">guest@adetola.dev:~$</span>
+            <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
