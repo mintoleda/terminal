@@ -76,6 +76,7 @@ export class Terminal {
 
     switch (cmd.toLowerCase()) {
       case COMMANDS.HELP:
+      case COMMANDS.LS:
         output = createOutput(getHelpOutput());
         break;
       case COMMANDS.ABOUT:
@@ -131,16 +132,13 @@ export class Terminal {
         output = createOutput(args.join(' '));
         break;
       case COMMANDS.RESUME:
-        output = createOutput('Opening resume...');
-        window.open('https://adetola.dev/resources/resume.pdf', '_blank');
+        output = createOutput('<a href="https://adetola.dev/resources/resume.pdf" class="contact-link" target="_blank">https://adetola.dev/resources/resume.pdf</a>');
         break;
       case COMMANDS.USES:
-        output = createOutput('Redirecting to /uses...');
-        window.location.href = 'https://adetola.dev/uses';
+        output = createOutput('<a href="https://adetola.dev/uses" class="contact-link" target="_blank">https://adetola.dev/uses</a>');
         break;
       case COMMANDS.NOW:
-        output = createOutput('Redirecting to /now...');
-        window.location.href = 'https://adetola.dev/now';
+        output = createOutput('<a href="https://adetola.dev/now" class="contact-link" target="_blank">https://adetola.dev/now</a>');
         break;
       default:
         output = createOutput(`<div class="error-text">Command not found: ${cmd}. Type 'help' to see available commands.</div>`);

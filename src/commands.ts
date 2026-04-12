@@ -15,6 +15,7 @@ export const COMMANDS = {
   RESUME: 'resume',
   USES: 'uses',
   NOW: 'now',
+  LS: 'ls',
 } as const;
 
 export async function fetchSkills(): Promise<Skill[]> {
@@ -82,6 +83,7 @@ export function getHelpOutput(): HTMLElement {
     [COMMANDS.RESUME, 'Link to resume'],
     [COMMANDS.USES, 'Link to my setup'],
     [COMMANDS.NOW, 'Link to what I\'m doing now'],
+    [COMMANDS.LS, 'List all available commands'],
   ];
 
   helpData.forEach(([cmd, desc]) => {
